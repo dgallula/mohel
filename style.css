@@ -1,4 +1,4 @@
- /* General Styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -6,13 +6,6 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-
-  /* Image de fond */
-   background-size: cover; /* Couvre toute la page */
-  background-position: center; /* Centre l'image */
-  background-repeat: no-repeat; /* Empêche la répétition de l'image */
-  background-attachment: fixed;/* L'image reste fixe lors du défilement */
-  
 }
 
 body::before {
@@ -26,20 +19,21 @@ body::before {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.1; /* Ajustez l'opacité ici */
+  opacity: 0.1;
+  z-index: -1; /* Ensure background is behind content */
 }
 
-/* Conteneur général */
 .container {
   width: 80%;
   margin: 0 auto;
-  background-color: rgba(7, 111, 140, 0.5); /* Fond semi-transparent */
+  background-color: rgba(7, 111, 140, 0.5);
   padding: 20px;
-  border-radius: 10px; /* Coins arrondis */
-  color: #fff; /* Couleur du texte pour lisibilité */
+  border-radius: 10px;
+  color: #fff;
+  z-index: 1;
+  position: relative;
 }
 
-/* Header */
 header {
   background: #1e1d79;
   color: #fff;
@@ -65,7 +59,6 @@ header ul li {
   margin-right: 20px;
 }
 
-/* Section Styles */
 section {
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
@@ -92,16 +85,14 @@ section ul li {
   font-size: 18px;
 }
 
-/* Footer */
 footer {
-  background: white;
+  background: #1e1d79;
   color: #fff;
   text-align: center;
   padding: 20px;
   margin-top: 20px;
 }
 
-/* Navigation et boutons de langue */
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -121,7 +112,7 @@ nav ul li a {
 }
 
 .language-buttons button {
-  background-color: rgba(255, 255, 255, 0.7); /* Boutons semi-transparents */
+  background-color: rgba(255, 255, 255, 0.7);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -133,7 +124,6 @@ nav ul li a {
   height: 20px;
 }
 
-/* Carousel */
 #photos {
   text-align: center;
   padding: 50px 0;
@@ -147,87 +137,41 @@ nav ul li a {
   border-radius: 10px;
 }
 
-.carousel-item {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: auto;
-}
-
-.carousel-item.active {
-  display: block;
-  position: relative;
-}
-
-.carousel-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.carousel-control.prev {
-  left: 10px;
-}
-
-.carousel-control.next {
-  right: 10px;
-}
-
 .carousel img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
+/* Language button styles */
+.btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
 }
 
-.gallery-item {
-  flex: 1 1 calc(33.333% - 32px);
-  box-sizing: border-box;
+.lang-fr {
+  background-color: #0056b3; /* Bleu pour le français */
 }
 
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
+.lang-en {
+  background-color: #007bff; /* Bleu clair pour l'anglais */
 }
 
-@media (max-width: 768px) {
-  .gallery-item {
-      flex: 1 1 calc(50% - 32px);
-  }
+.lang-es {
+  background-color: #ff5722; /* Orange pour l'espagnol */
 }
 
-@media (max-width: 480px) {
-  .gallery-item {
-      flex: 1 1 100%;
-  }
+.lang-he {
+  background-color: #4caf50; /* Vert pour l'hébreu */
 }
 
-.language-buttons button:hover {
-  background-color: rgba(0, 255, 0, 0.5); /* Changer en vert au survol */
-}
-
-.language-buttons button:focus {
-  outline: 3px solid #0779e4; /* Ajouter une bordure visible pour l'accessibilité */
-}
-
-.lang-btn:hover {
-  background-color: green;
-
-
+main {
+  padding: 20px;
 }
 
 
