@@ -86,7 +86,7 @@ section ul li {
 }
 
 footer {
-  background: #1e1d79;
+  background: #0c08e9;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -174,4 +174,26 @@ main {
   padding: 20px;
 }
 
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  border-bottom: 2px solid #fff;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+}
+
+.carousel-item img {
+  max-height: 600px;
+  object-fit: cover;
+}
+
+footer {
+  border-top: 2px solid #4b0bec;
+}
 

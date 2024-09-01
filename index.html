@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="bg-primary text-white p-3">
+
+
+    <!-- Ajoutez l'élément audio ici -->
+         <!-- Ajoutez l'élément audio ici avec l'ID approprié -->
+    <audio id="lamoledet" src="audio/lamoledet.mp3" preload="auto"></audio>
+     <header class="bg-primary text-white p-3">
+
         <div class="container d-flex justify-content-between align-items-center">
             <h1 id="site-title">Mohel David Gallula</h1>
+            <button id="playButton">Jouer la musique</button>
+
             <div>
                 <button class="btn btn-light btn-sm lang-en" onclick="changeLanguage('en')">English</button>
                 <button class="btn btn-light btn-sm lang-fr" onclick="changeLanguage('fr')">Français</button>
@@ -81,7 +89,7 @@
                         <img src="img/brit.jpg" class="d-block w-100" alt="Photo 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/image1.jpg" class="d-block w-100" alt="Photo 3">
+                        <img src="img/image3.jpg" class="d-block w-100" alt="Photo 3">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselPhotos" role="button" data-slide="prev">
@@ -96,7 +104,42 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white text-center p-3">
+      <!-- Script pour démarrer l'audio automatiquement -->
+      <script>
+        var isPlaying = false;
+
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('lamoledet');
+            
+            if (isPlaying) {
+                // Si la musique est déjà en train de jouer, arrêtez-la
+                audio.pause();
+                audio.currentTime = 0; // Réinitialise la lecture au début
+                this.textContent = 'Jouer la musique'; // Changer le texte du bouton
+                isPlaying = false;
+            } else {
+                // Assurez-vous que l'audio n'est pas en sourdine avant de jouer
+                audio.muted = false;
+                
+                audio.play().catch(function(error) {
+                    console.log('Erreur lors de la lecture de l\'audio:', error);
+                });
+                
+                this.textContent = 'Arrêter la musique'; // Changer le texte du bouton
+                isPlaying = true;
+            }
+        });
+
+        // Optionnel : Essayez de lire l'audio automatiquement lors du chargement, avec une interaction utilisateur requise.
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('lamoledet');
+            audio.play().catch(function(error) {
+                console.log('Erreur lors de la lecture automatique de l\'audio:', error);
+            });
+        });
+    </script>
+
+    <footer class="bg-bleu text-white text-center p-3">
         <p id="footer-text">Tous droits réservés © 2024 Mohel David Gallula</p>
     </footer>
 
@@ -106,3 +149,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
