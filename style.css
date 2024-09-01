@@ -1,0 +1,233 @@
+ /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+
+  /* Image de fond */
+   background-size: cover; /* Couvre toute la page */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  background-attachment: fixed;/* L'image reste fixe lors du défilement */
+  
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/david-gallula-mohel.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1; /* Ajustez l'opacité ici */
+}
+
+/* Conteneur général */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(7, 111, 140, 0.5); /* Fond semi-transparent */
+  padding: 20px;
+  border-radius: 10px; /* Coins arrondis */
+  color: #fff; /* Couleur du texte pour lisibilité */
+}
+
+/* Header */
+header {
+  background: #1e1d79;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #0779e4 3px solid;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header ul {
+  padding: 0;
+  list-style: none;
+}
+
+header ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Section Styles */
+section {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+section p, section ul {
+  text-align: center;
+  margin: 0 auto;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Footer */
+footer {
+  background: white;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Navigation et boutons de langue */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+}
+
+.language-buttons {
+  text-align: right;
+}
+
+.language-buttons button {
+  background-color: rgba(255, 255, 255, 0.7); /* Boutons semi-transparents */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.language-buttons img {
+  width: 30px;
+  height: 20px;
+}
+
+/* Carousel */
+#photos {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-item {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item.active {
+  display: block;
+  position: relative;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.333% - 32px);
+  box-sizing: border-box;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+      flex: 1 1 calc(50% - 32px);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-item {
+      flex: 1 1 100%;
+  }
+}
+
+.language-buttons button:hover {
+  background-color: rgba(0, 255, 0, 0.5); /* Changer en vert au survol */
+}
+
+.language-buttons button:focus {
+  outline: 3px solid #0779e4; /* Ajouter une bordure visible pour l'accessibilité */
+}
+
+.lang-btn:hover {
+  background-color: green;
+
+
+}
+
+
