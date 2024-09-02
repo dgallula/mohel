@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions Fréquentes - Brith Mila</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .faq-item h3 {
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-size: 1.2rem;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .faq-item h3::after {
+            content: '\f107';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: #4CAF50;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active h3::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-item p {
+            margin: 0;
+            padding-left: 1rem;
+            display: none;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .faq-item.active p {
+            display: block;
+            opacity: 1;
+        }
+
+        footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        footer p i {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .faq-item h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Questions Fréquentes - Brith Mila</h1>
+    </header>
+
+    <div class="container">
+        <h2>FAQ - Questions & Réponses</h2>
+
+        <div class="faq-item">
+            <h3>1. Qu’est-ce qu’une Brith Mila?</h3>
+            <p>La Brith Mila est la circoncision rituelle pratiquée sur les garçons juifs le huitième jour de leur naissance, conformément à la loi juive.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>2. Qui peut réaliser la Brith Mila?</h3>
+            <p>La Brith Mila doit être réalisée par un mohel, un professionnel spécialement formé et expérimenté dans l'art de la circoncision rituelle.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>3. Quels sont les préparatifs nécessaires avant la Brith Mila?</h3>
+            <p>Avant la Brith Mila, le mohel examine l’enfant pour s’assurer qu'il est en bonne santé et qu'il n'y a pas de contre-indications médicales. Il discute également des antécédents familiaux avec les parents.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>4. Que se passe-t-il le jour de la Brith Mila?</h3>
+            <p>Le jour de la Brith Mila, la cérémonie commence par des bénédictions et des prières. Ensuite, le mohel réalise la circoncision. Le processus est rapide et se déroule dans un environnement respectueux et sacré.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>5. Quels soins sont nécessaires après la Brith Mila?</h3>
+            <p>Après la Brith Mila, le mohel donne des instructions spécifiques sur les soins à apporter à l’enfant. Il est essentiel de suivre ces instructions pour assurer une guérison rapide et sans complications.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p><i class="fas fa-phone-alt"></i> Téléphone : 06 12 34 56 78</p>
+        <p><i class="fas fa-envelope"></i> Email : mohel@example.com</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohel David Gallula</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,8 +18,7 @@
 
         <div class="container d-flex justify-content-between align-items-center">
             <h1 id="site-title">Mohel David Gallula</h1>
-            <button id="playButton">Jouer la musique</button>
-
+            <button id="playButton"><i class="fas fa-music"></i> Jouer la musique</button>
             <div>
                 <button class="btn btn-light btn-sm lang-en" onclick="changeLanguage('en')">English</button>
                 <button class="btn btn-light btn-sm lang-fr" onclick="changeLanguage('fr')">Français</button>
@@ -50,7 +50,9 @@
     <section id="home" class="jumbotron text-center">
         <div class="container">
             <h1 class="display-4" id="home-title">Bienvenue sur le site du Mohel David Gallula</h1>
-            <p class="lead" id="home-subtitle">Spécialiste en circoncision, avec une approche familiale et respectueuse des traditions.</p>
+            <p class="lead" id="home-subtitle">Spécialiste en circoncision, avec une approche familiale et respectueuse des traditions. 
+                <a id="ceremomial-link" href="ceremonial.html">  cérémonial ...</a>
+                </p>
         </div>
     </section>
 
@@ -62,8 +64,12 @@
 
         <section id="services" class="mb-5">
             <h2 id="services-title">Services</h2>
-            <p id="services-description">Je propose des services de circoncision pour les nouveau-nés...</p>
-        </section>
+            <p id="services-description">
+                Je propose des services de circoncision pour les nouveau-nés.
+                <a href="faq.html">  questions frequentes ...</a>
+            </p>
+            
+         </section>
 
         <section id="testimonials" class="mb-5">
             <h2 id="testimonials-title">Témoignages</h2>
@@ -149,4 +155,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 

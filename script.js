@@ -9,9 +9,10 @@ const translations = {
         contact: 'Contact',
         photos: 'Photos',
         welcome: 'Welcome to Mohel David Gallula\'s website',
-        intro: 'Specialist in circumcision, with a family-oriented and traditional approach.',
+        intro: 'Specialist in circumcision, with a family-oriented and traditional approach.cérémonial',
         aboutTitle: 'About Me',
         aboutText: 'I am David Gallula, a Mohel with over 20 years of experience...',
+        ceremonialLink: 'See the ceremonial...',
         servicesTitle: 'Services',
         servicesText: 'I offer circumcision services for newborns...',
         testimonialsTitle: 'Testimonials',
@@ -30,11 +31,12 @@ const translations = {
         contact: 'Contact',
         photos: 'Photos',
         welcome: 'Bienvenue sur le site du Mohel David Gallula',
-        intro: 'Spécialiste en circoncision, avec une approche familiale et respectueuse des traditions.',
+        intro: 'Spécialiste en circoncision, avec une approche familiale et respectueuse des traditions. voir le cérémonial',
         aboutTitle: 'À propos de Moi',
         aboutText: 'Je suis David Gallula, Mohel avec plus de 20 ans d\'expérience...',
         servicesTitle: 'Services',
         servicesText: 'Je propose des services de circoncision pour les nouveau-nés...',
+        ceremonialLink: 'voir le cérémonial...',
         testimonialsTitle: 'Témoignages',
         testimonialsQuote: '"David est un Mohel exceptionnel qui a pris soin de notre fils avec une grande expertise."',
         testimonialsAuthor: 'Famille Cohen',
@@ -51,7 +53,8 @@ const translations = {
         contact: 'צור קשר',
         photos: 'תמונות',
         welcome: 'ברוכים הבאים לאתר של מוהל דוד גלוולה',
-        intro: 'מומחה לברית מילה, עם גישה משפחתית ומכבדת את המסורת.',
+        intro: '. מומחה לברית מילה, עם גישה משפחתית ומכבדת את המסורת.טקס',
+        ceremonialLink: 'טקס...',
         aboutTitle: 'אודותיי',
         aboutText: 'אני דוד גלוולה, מוהל עם יותר מ-20 שנות ניסיון...',
         servicesTitle: 'שירותים',
@@ -72,11 +75,12 @@ const translations = {
         contact: 'Contacto',
         photos: 'Fotos',
         welcome: 'Bienvenido al sitio web de Mohel David Gallula',
-        intro: 'Especialista en circuncisión, con un enfoque familiar y respetuoso de las tradiciones.',
+        intro: 'Especialista en circuncisión, con un enfoque familiar y respetuoso de las tradiciones.ceremonial',
         aboutTitle: 'Acerca de mí',
         aboutText: 'Soy David Gallula, un Mohel con más de 20 años de experiencia...',
         servicesTitle: 'Servicios',
         servicesText: 'Ofrezco servicios de circuncisión para recién nacidos...',
+        ceremonialLink: 'ceremonial...',
         testimonialsTitle: 'Testimonios',
         testimonialsQuote: '"David es un Mohel excepcional que cuidó de nuestro hijo con una gran experiencia."',
         testimonialsAuthor: 'Familia Cohen',
@@ -102,10 +106,13 @@ function changeLanguage(lang) {
     document.getElementById('services-description').textContent = translations[lang].servicesText;
     document.getElementById('testimonials-title').textContent = translations[lang].testimonialsTitle;
     document.getElementById('testimonials-quote').textContent = translations[lang].testimonialsQuote;
+    document.getElementById('ceremonial-link').textContent = translations[lang].testimonialsQuote;
     document.getElementById('testimonials-author').textContent = translations[lang].testimonialsAuthor;
     document.getElementById('contact-title').textContent = translations[lang].contactTitle;
     document.getElementById('contact-description').textContent = translations[lang].contactText;
     document.getElementById('photos-title').textContent = translations[lang].photosTitle;
     document.getElementById('footer-text').textContent = translations[lang].footerText;
 }
+
+
 
